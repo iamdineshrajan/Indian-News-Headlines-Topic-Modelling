@@ -5,8 +5,8 @@ from textPreprocessing import TextPreprocessing
 
 
 
-dictionary_model = pickle.load(open('C:/Users/DELL/Main Project/dictionary.pkl','rb'))
-loaded_model = pickle.load(open('C:/Users/DELL/Main Project/model.pkl','rb'))
+dictionary_model = pickle.load(open('dictionary.pkl','rb'))
+loaded_model = pickle.load(open('model.pkl','rb'))
 
 def categorize(text):
     var = ''
@@ -76,23 +76,23 @@ def main():
         categorize(news)
     result = categorize(news)
     if result == "Category number:1":
-        cat1 = Image.open('C:/Users/DELL/Main Project/Category1.png')
+        cat1 = Image.open('Category1.png')
         st.text('Entertainment News')
         st.image(cat1)
     elif result == "Category number:2":
-        cat2 = Image.open('C:/Users/DELL/Main Project/Category2.png')
+        cat2 = Image.open('Category2.png')
         st.text('Sports News')
         st.image(cat2)
     elif result == "Category number:3":
-        cat3 = Image.open('C:/Users/DELL/Main Project/Category3.png')
+        cat3 = Image.open('Category3.png')
         st.text('Cinema News')
         st.image(cat3)
     elif result == "Category number:4":
-        cat4 = Image.open('C:/Users/DELL/Main Project/Category4.png')
+        cat4 = Image.open('Category4.png')
         st.text('Economic News')
         st.image(cat4)
     elif result == "Category number:5":
-        cat5 = Image.open('C:/Users/DELL/Main Project/Category5.png')
+        cat5 = Image.open('Category5.png')
         st.text('City News')
         st.image(cat5)
     st.success(result)
